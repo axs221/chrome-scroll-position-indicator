@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+
+	"content_scripts": [
+		{
+			"run_at" :"document_end",
+			"matches": ["<all_urls>"],
+			"js": ["script.js"],
+			"css":["mycss.css"] 
+		}
+	],
+
+  "name": "Scroll Position Indicator",
+  "description": "This extension will show scroll position",
+  "version": "1.0",
+
+  "browser_action": {
+		"default_icon": "icon.png",
+		"default_popup": "popup.html"
+  },
+  "permissions": [
+		"activeTab"
+	]
+}
